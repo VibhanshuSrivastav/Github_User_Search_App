@@ -1,0 +1,212 @@
+
+.heading {
+    text-align: center;
+    color: rgb(0, 41, 244);
+    margin: 1rem 0;
+    font-size: 3rem;
+  }
+
+  .githubIcon{
+    color: rgb(0, 41, 244);
+    font-size: 4.5rem;
+  }
+  
+  .errorMsg {
+    font-size: 1.6rem;
+    color: rgb(0, 0, 183);
+    text-align: center;
+  }
+  
+ 
+  .homeContainer {
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    padding: 2rem;
+  }
+  
+
+  .userSearch {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    /* background-color: red; */
+  }
+  
+  .userSearch label {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .userSearch input {
+
+    height: 3.5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border: none;
+    padding: 1rem 2rem;
+    width: 30rem;
+    outline: none;
+    background-color: rgba(57, 57, 57, 0.386);
+    color: #fff;
+    font-size: 1.3rem;
+  }
+  
+  .userSearch input::placeholder {
+    color: #fff;
+  }
+  
+  .searchBtn {
+    height: 3.45rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgba(0, 58, 248, 0.557);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .searchBtn:hover {
+    background-color: rgba(0, 58, 248, 0.8);
+  }
+  
+
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  
+  .cardBody {
+    background-color: rgba(0, 98, 255, 0.479);
+    color: #fff;
+    backdrop-filter: blur(0.5rem);
+    border-radius: 13rem;
+    margin: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 2rem rgba(70, 70, 70, 0.5);
+    transition: all 0.4s;
+    padding: 0 0.3rem 1.8rem;
+    width: 23%;
+  }
+  
+
+  .cardBody:hover {
+    box-shadow: 0 0 1rem rgba(112, 121, 138, 0.7);
+  }
+  
+ 
+  .userImg img {
+    height: 28rem;
+    width: 100%;
+    border-radius: 13rem;
+    object-fit: cover;
+    object-position: 100% 100%;
+    box-shadow: 0 0 1rem rgba(56, 56, 56, 0.5);
+  }
+  
+  
+  .userDetails h3 {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .userDetails p {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+  }
+  
+  
+  .cardBtn button {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btnLink{
+    font-size: 1.3rem;
+    color: white;
+      text-decoration: none;
+
+  }
+
+  
+  .cardBtn button:hover {
+    background-color: rgb(0, 0, 51);
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 992px) {
+    .userSearch input {
+      width: 20rem;
+    }
+    .cardBody {
+      width: 45%;
+    }
+  }
+  
+  /* For small screens */
+  @media (max-width: 600px) {
+    .userSearch input {
+      width: 79%;
+    }
+    .cardBody {
+      width: 90%;
+    }
+    .heading {
+      font-size: 2.5rem;
+    }
+    .userDetails h3 {
+      font-size: 1.8rem;
+    }
+    .userDetails p {
+      font-size: 1.3rem;
+    }
+    .searchBtn {
+      font-size: 1rem;
+      padding: 0 0.8rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .userSearch input {
+      width: 35rem;
+      font-size: 1.5rem;
+    }
+    .heading {
+      font-size: 4rem;
+    }
+    .cardBody {
+      width: 20%;
+      padding: 1.5rem;
+    }
+    .userDetails h3 {
+      font-size: 2.5rem;
+    }
+    .userDetails p {
+      font-size: 1.8rem;
+    }
+    .cardBtn button {
+      font-size: 1.5rem;
+      padding: 0.8rem 1.5rem;
+    }
+    .userImg img {
+        height: 40rem;
+    }
+  }
+  
