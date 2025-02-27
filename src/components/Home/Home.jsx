@@ -8,9 +8,11 @@ const Home = () => {
   const [searchUser, setSearchUser] = useState("");
   const [userList, setUserList] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const { data } = await getUserProfile(searchUser);
       if (data && data.items && data.items.length > 0) {
@@ -26,9 +28,11 @@ const Home = () => {
           })
         );
         setUserList(usersWithFullDetails);
+        setLoading(false);
         setError(null);
       } else {
         setUserList([]);
+        // setLoading(true);
         setError("User not found !!");
       }
     } catch (error) {
@@ -37,8 +41,8 @@ const Home = () => {
       setUserList([]);
     }
   };
-  
 
+  
   return (
     <div className={styles.homeContainer}>
       <IoLogoGithub className={styles.githubIcon} />
@@ -55,6 +59,7 @@ const Home = () => {
         </form>
       </div>
       <div className={styles.cardContainer}>
+        {loading ? <p className={styles.loading}></p> : ""}
         {error && <p className={styles.errorMsg}>{error}</p>}
         {userList && userList.length > 0 && userList.map(user => (
           <div key={user.id} className={styles.cardBody}>

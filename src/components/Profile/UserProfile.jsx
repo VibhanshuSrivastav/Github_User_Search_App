@@ -13,8 +13,8 @@ const UserProfile = () => {
       const fetchRepos = async () => {
         try {
           const repoData = await getUserRepos(user.login);
-          console.log("repo data is coming::", repoData)
-          setRepos(repoData);
+          // console.log("repo data is coming::", repoData);
+            setRepos(repoData);
         } catch (error) {
           console.log("Error fetching repos ::", error)
         }
@@ -68,7 +68,10 @@ const UserProfile = () => {
               </a>
             ))
           ) : (
-            <p>No repositories available.</p>
+            <>
+            <p className={styles.loading}></p>
+            {/* <p>No repositories available.</p> */}
+            </>
           )}
         </ul>
       </div>

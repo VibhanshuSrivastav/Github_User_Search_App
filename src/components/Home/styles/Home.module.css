@@ -35,6 +35,23 @@
 
     /* background-color: red; */
   }
+
+  .loading{
+    position: absolute;
+    top: 0;
+    background-color:rgb(0, 0, 183);
+    height:0.5rem;
+    animation:loading 0.8s ease-in-out forwards;
+  }
+
+  @keyframes loading{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 100%;
+    }
+  }
   
   .userSearch label {
     font-size: 1.5rem;
